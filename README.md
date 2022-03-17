@@ -14,10 +14,10 @@ Linux や Mac
 $ export ETH_KEY='Etherscanで取得したAPIキー'
 ```
 
-Windows
+Windows(PowerShell を想定)
 
 ```console
-$ set ETH_KEY='Etherscanで取得したAPIキー'
+$ $Env:ETH_KEY='Etherscanで取得したAPIキー'
 ```
 
 ### 起動
