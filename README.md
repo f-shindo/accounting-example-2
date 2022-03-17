@@ -66,8 +66,17 @@ $ gcloud config set project <PROJECT_IDを入力>
 
 ### デプロイ
 
+Linux や Mac
+
 ```console
 gcloud run deploy --source .\
+    --set-env-vars ETH_KEY='Etherscanで取得したAPIキー'
+```
+
+Windows
+
+```console
+gcloud run deploy --source .^
     --set-env-vars ETH_KEY='Etherscanで取得したAPIキー'
 ```
 
