@@ -11,7 +11,7 @@
 Linux や Mac
 
 ```console
-$ export ETH_KEY='Etherscanで取得したインフラキー'
+$ export ETH_KEY='Etherscanで取得したAPIキー'
 ```
 
 Windows
@@ -67,7 +67,8 @@ $ gcloud config set project <PROJECT_IDを入力>
 ### デプロイ
 
 ```console
-$ gcloud run deploy --source .
+gcloud run deploy --source .\
+    --set-env-vars ETH_KEY='Etherscanで取得したAPIキー'
 ```
 
 ```
