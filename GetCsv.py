@@ -1,13 +1,13 @@
 import requests
 import json
 import pandas as pd
-import settings
+import os
+
+# ERC20のやり取りを見たいアドレスとEtherscanのAPI KEYを入力しましょう
+api_key = os.environ['ETH_KEY']
 
 
 def make_df(address):
-    # ERC20のやり取りを見たいアドレスとEtherscanのAPI KEYを入力しましょう
-    api_key = settings.ETH
-
     # 実際にEtherscanのAPIに対してリクエストを行うURLを作成
     url = f'https://api.etherscan.io/api?module=account&action=tokentx&address={address}&startblock=0&endblock=99999999&offset=1000&sort=asc&apikey={api_key}'
 
